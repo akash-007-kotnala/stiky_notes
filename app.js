@@ -20,7 +20,7 @@ else{
         noteObj = [];
     }
     else {
-        noteObj = JSON.parse(notes);//convert text into a JavaScript object
+        noteObj = JSON.parse(notes);
     }
     let objitem = {
     text:addtext.value,
@@ -46,7 +46,7 @@ function showNotes() {
         noteObj = [];
     }
     else {
-        noteObj = JSON.parse(notes);//convert text into a JavaScript object
+        noteObj = JSON.parse(notes);
     }
 
     let html = "";
@@ -76,7 +76,7 @@ function showNotes() {
 
 // Function to delete a note
 function deleteNote(index) {
-    //   console.log("I am deleting", index);
+    
 
     let notes = localStorage.getItem("notes");
     if (notes == null) {
@@ -97,7 +97,6 @@ let search = document.getElementById('searchTxt');
 search.addEventListener("input", function () {
 
     let inputVal = search.value.toLowerCase();
-    // console.log('Input event fired!', inputVal);
     let noteCards = document.getElementsByClassName('noteCard');
     Array.from(noteCards).forEach(function (element) {
         let cardTxt = element.getElementsByTagName("p")[0].innerText;
@@ -112,6 +111,6 @@ search.addEventListener("input", function () {
     
         }
         
-        // console.log(cardTxt);
+        
     })
 })
